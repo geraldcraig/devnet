@@ -1,5 +1,4 @@
 # 1. Import libraries for API requests, JSON formatting, and epoch time conversion.
-from tkinter import Y
 import requests
 import json
 import time
