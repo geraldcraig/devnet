@@ -25,7 +25,6 @@
 ###############################################################
 
 # 1. Import libraries for API requests, JSON formatting, and epoch time conversion.
-from turtle import title
 import requests
 import json
 import time
@@ -53,7 +52,7 @@ if not r.status_code == 200:
 print("List of rooms:")
 rooms = r.json()["items"]
 for room in rooms:
-    print("room type: " + room["type"] + " - room title: " + room["title"])
+    print("Type: " + room["type"] + " Name: " + room["title"])
 
 #######################################################################################
 # SEARCH FOR WEBEX TEAMS ROOM TO MONITOR
