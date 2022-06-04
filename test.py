@@ -101,3 +101,13 @@ while True:
 
         locationResults = json_data["results"][0]["providedLocation"]["location"]
         print("Location: " + locationResults)
+
+# 8. Provide the MapQuest key values for latitude and longitude.
+        locationLat = json_data["providedLocation"]
+        locationLng = json_data["location"]
+        print("Location GPS coordinates: " + str(locationLat) + ", " + str(locationLng))
+        
+        issAPIGetParameters = { 
+                                "lat": locationLat, 
+                                "lon": locationLng
+                              }
