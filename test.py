@@ -9,7 +9,7 @@ choice = input("Do you wish to use the hard-coded Webex token? (y/n) ")
 if choice == "n":
     accessToken = input("Please enter access token: ")
 else:
-	accessToken = "Bearer Yzg3OTY3MzQtMTk2NS00YWIyLWIzZmItMzg5ZTUyMjc5YzFhN2U1MGJlMDItNjM2_PE93_230463a1-5812-4f42-9411-a7901256c3a1"
+	accessToken = "Bearer ZDE5ZmVlNWItNGU0NC00NGQzLWI5ZTktZjZjN2FjZGIxNDFhYTJjMGRjNGUtNDc2_PE93_230463a1-5812-4f42-9411-a7901256c3a1"
 
 # 3. Provide the URL to the Webex Teams room API.
 r = requests.get(   "https://webexapis.com/v1/rooms",
@@ -26,7 +26,7 @@ if not r.status_code == 200:
 print("List of rooms:")
 rooms = r.json()["items"]
 for room in rooms:
-    print("Type: " + room["type"] + " Name: " + room["title"])
+    print("Type: " + "'" + room["type"] + "'" + " Name: " + room["title"])
 
 #######################################################################################
 # SEARCH FOR WEBEX TEAMS ROOM TO MONITOR
