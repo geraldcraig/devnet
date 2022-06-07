@@ -162,7 +162,7 @@ while True:
 
 # 13. Complete the code to post the message to the Webex Teams room.            
         HTTPHeaders = { 
-                             "Authorization": <!!!REPLACEME!!!>,
+                             "Authorization": accessToken,
                              "Content-Type": "application/json"
                            }
         PostData = {
